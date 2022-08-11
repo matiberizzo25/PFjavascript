@@ -1,6 +1,6 @@
 // Inicializamos el array de carrito, luego lo utilizaremos para el LocalStorage:
-
-let carrito = [];
+window.addEventListener('load',()=>{
+    let carrito = [];
 
 const obtainProducts = localStorage.getItem('Listado de Productos');
 
@@ -76,3 +76,4 @@ function vaciarCarrito(){
     localStorage.removeItem('Carrito');
     carrito = [];
 }
+});

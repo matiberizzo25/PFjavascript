@@ -1,4 +1,5 @@
-const products = [
+window.addEventListener('load',()=>{
+    const products = [
     {id: 1, titulo: 'Mad Max', plataforma: 'XBOX', stock: 73, precio: 554, foto: './assets/1.jpg'},
     {id: 2, titulo: 'Doom 64 standard', plataforma: 'XBOX', stock: 29, precio: 233, foto: './assets/2.jpg'},
     {id: 3, titulo: 'Stela', plataforma: 'XBOX', stock: 30, precio: 554, foto: './assets/3.jpg'},
@@ -20,3 +21,4 @@ let JSONproducts = JSON.stringify(products);
 localStorage.setItem('Listado de Productos',JSONproducts);
 
 // Luego hay que definir las fotos para crearlas en el DOM  
+});
