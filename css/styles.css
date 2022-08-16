@@ -46,23 +46,23 @@ button:hover {
   display: grid;
   position: fixed;
   grid-template-columns: repeat(12, 1fr);
-  background-color: var(--color-principal);
-  box-shadow: 0px 0px 10px var(--color-terciario);
+  background-color: transparent;
   width: 100%;
   height: var(--header-height);
   z-index: 100;
-  /*     .logo{
-          height: 65px;
-          margin-left: 10px;
-          align-items: center;
-          justify-content: center;
-          grid-column: 1;
-          transition: all .5s;
-
-          &:hover{
-              transform:translate(20px);
-          }
-      } */
+}
+.navBar .logo {
+  height: 20px;
+  margin-left: 15px;
+  margin-top: 18px;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1;
+  transition: all 0.5s;
+  opacity: 90%;
+}
+.navBar .logo:hover {
+  transform: translate(20px);
 }
 .navBar .menu {
   grid-column: 1/-1;
@@ -85,9 +85,14 @@ button:hover {
   text-shadow: 0px 0px 20px white;
 }
 
-#hero {
+#bg {
   height: calc(var(--header-height) + 10px);
-  background-color: rgba(128, 128, 128, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bg .titulo {
+  text-align: center;
 }
 
 #products {
@@ -160,7 +165,7 @@ button:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  grid-column: 9/-1;
+  grid-column: 7/-1;
 }
 #carrito .contenedorCarrito .btnEnd {
   border: none;
@@ -177,9 +182,10 @@ button:hover {
 }
 
 footer {
-  height: 4vh;
+  height: 5vh;
 }
 
+/* MEDIA QUERIES */
 @media screen and (min-width: 700px) {
   .navBar .menu {
     grid-column: 6/12;

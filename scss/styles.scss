@@ -47,24 +47,25 @@ button{
     display: grid;
     position: fixed;
     grid-template-columns: repeat(12,1fr);
-    background-color: var(--color-principal);
-    box-shadow: 0px 0px 10px var(--color-terciario);
+    background-color: transparent;
     width: 100%;
     height: var(--header-height);
     z-index: 100;
 
-/*     .logo{
-        height: 65px;
-        margin-left: 10px;
+    .logo{
+        height: 20px;
+        margin-left: 15px;
+        margin-top: 18px;
         align-items: center;
         justify-content: center;
         grid-column: 1;
         transition: all .5s;
+        opacity: 90%;
 
         &:hover{
             transform:translate(20px);
         }
-    } */
+    }
 
     .menu{
         grid-column: 1/-1;
@@ -92,11 +93,15 @@ button{
     }
 }
 
-#hero{
-    height: calc(var(--header-height) + 10px);
-    background-color: rgba(128, 128, 128, 0);
-}
+#bg{
+    height: calc(var(--header-height) + 10px);    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    .titulo{
+        text-align: center;
+    }
+}
 #products{
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -175,7 +180,7 @@ button{
         display: flex;
         align-items: center;
         flex-direction: column;
-        grid-column: 9/-1;
+        grid-column:7/-1;
 
         .btnEnd{
             border: none;
@@ -197,6 +202,10 @@ button{
 footer{
     height: 5vh;
 }
+
+
+
+/* MEDIA QUERIES */
 
 @media screen and (min-width: 700px){
 
