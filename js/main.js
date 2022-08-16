@@ -1,6 +1,8 @@
 // Inicializamos el array de carrito, luego lo utilizaremos para el LocalStorage:
+
 window.addEventListener('load',()=>{
-    let carrito = [];
+
+let carrito = [];
 
 const obtainProducts = localStorage.getItem('Listado de Productos');
 
@@ -77,3 +79,5 @@ function vaciarCarrito(){
     carrito = [];
 }
 });
+
+// Para el desafio complementario de optimizacion agregaremos descuentos a ciertos productos con el operador ternario y a esos productosles pondremos un indicador de que tienen tanto porcentaje de descuento.
