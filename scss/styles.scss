@@ -125,7 +125,7 @@ button{
 }
 
 .bg{
-    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/fondo1.jpg");
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./assets/fondo1.jpg");
     height: calc(var(--header-height) + 90vh);
     background-position: center center;
     background-size: cover;
@@ -156,7 +156,7 @@ button{
 }
 
 .bg2{
-    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/3.jpg");
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./assets/3.jpg");
     height: calc(var(--header-height) + 90vh);
     background-position: center center;
     background-size: cover;
