@@ -15,6 +15,7 @@ window.addEventListener('load',()=>{
     {id: 13, titulo: 'Deagon Ball Z: Kakarot', plataforma: 'PS4', stock: 15, precio: 15000, foto: './assets/13.jpg'},
     {id: 14, titulo: 'Demon Slayer The Hinokami Chronicles', plataforma: 'PS4', stock: 43, precio: 15000, foto: './assets/14.jpg'},
     {id: 15, titulo: 'Sekiro Shadows Die Twice', plataforma: 'PS4', stock: 51, precio: 12000, foto: './assets/15.jpg'},
+    {id: 16, titulo: 'The Last of Us Part II', plataforma: 'PS4', stock: 31, precio: 11000, foto: './assets/16.jpg'}
 ];
 
 let JSONproducts = JSON.stringify(products);
