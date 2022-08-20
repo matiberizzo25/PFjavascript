@@ -15,6 +15,30 @@
     box-sizing: border-box;
 }
 
+input{
+    max-width: 190px;
+    height: 30px;
+    border: 2px solid transparent;
+    outline: none;
+    caret-color: #3f3f3f;
+    background-color: #ffffff11;
+    padding: 5px;
+    color: var(--color-blanco);
+    transition: .5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
+
+    &:focus{
+        caret-color: #fa4753;
+        color: #fa4753;
+        box-shadow: 4px 4px 10px #070707;
+
+        &::placeholder{
+            color: #fa4753;
+        }
+    }
+}
+
 body{
     font-family: 'poppins';
     background-color: var(--color-secundario);
@@ -91,6 +115,14 @@ button{
         }
     }
 
+    .input-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: 8;
+        margin-left: 20px;
+    }
+
     .menu{
         grid-column: 1/-1;
         display: flex;
@@ -119,7 +151,7 @@ button{
 
 .abajo{
     background-color: #0c0c0cd8;
-    box-shadow: 0px 0px 10px var(--color-terciario);
+    box-shadow: 0px 0px 15px var(--color-terciario);
     height: 4.5rem;
     backdrop-filter: blur(4px);
 }
@@ -327,7 +359,7 @@ footer{
             grid-column: 9/-1;
             margin-bottom: 0px;
             margin-top: 10px;
-            margin-left: 80px;
+            margin-left: 0px;
         }
     }
 

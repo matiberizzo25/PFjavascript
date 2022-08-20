@@ -15,6 +15,28 @@
   box-sizing: border-box;
 }
 
+input {
+  max-width: 190px;
+  height: 30px;
+  border: 2px solid transparent;
+  outline: none;
+  caret-color: #3f3f3f;
+  background-color: rgba(255, 255, 255, 0.0666666667);
+  padding: 5px;
+  color: var(--color-blanco);
+  transition: 0.5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+input:focus {
+  caret-color: #fa4753;
+  color: #fa4753;
+  box-shadow: 4px 4px 10px #070707;
+}
+input:focus::placeholder {
+  color: #fa4753;
+}
+
 body {
   font-family: "poppins";
   background-color: var(--color-secundario);
@@ -85,6 +107,13 @@ button:hover {
 .navBar .logo:hover {
   transform: translate(20px);
 }
+.navBar .input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 8;
+  margin-left: 20px;
+}
 .navBar .menu {
   grid-column: 1/-1;
   display: flex;
@@ -108,7 +137,7 @@ button:hover {
 
 .abajo {
   background-color: rgba(12, 12, 12, 0.8470588235);
-  box-shadow: 0px 0px 10px var(--color-terciario);
+  box-shadow: 0px 0px 15px var(--color-terciario);
   height: 4.5rem;
   backdrop-filter: blur(4px);
 }
@@ -288,7 +317,7 @@ footer {
     grid-column: 9/-1;
     margin-bottom: 0px;
     margin-top: 10px;
-    margin-left: 80px;
+    margin-left: 0px;
   }
   #products {
     grid-template-columns: repeat(4, 1fr);
