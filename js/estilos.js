@@ -10,7 +10,6 @@ window.addEventListener('scroll',(e)=>{
 
 const bg = document.querySelector('.bg');
 const changeBtn = document.querySelectorAll('.changeBg');
-console.log(changeBtn);
 
 changeBtn.forEach(change => {
     change.addEventListener('click',(e)=>{
