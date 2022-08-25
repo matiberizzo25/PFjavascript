@@ -272,6 +272,52 @@ footer{
     height: 5vh;
 }
 
+// SECCION DE FORMULARIO DE SING UP
+#sign-up{
+    padding: 5px 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+    input{
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .submit{
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.formulario-hidden{
+    transition: all 3s;
+    display: none;
+    position: absolute;
+}
+
+.formulario-show{
+    transition: all 3s;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 42%;
+
+    form{
+        grid-column: 3;
+    }
+
+}
+
+.error{
+    color: #ff0000;
+}
 
 
 /* MEDIA QUERIES */

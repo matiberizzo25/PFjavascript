@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/productos.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/estilos.js" defer></script>
+    <script src="js/signup.js" defer></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>ESVideoGames</title>
 </head>
@@ -13,18 +20,28 @@
 
         <header class="navBar">
             <a href="#"><img src="assets/logo1.png" alt="" class="logo"></a>
-            <div class="input-container">
-                <input type="text" id="buscador" placeholder="search" name="search">
-            </div>
+            <div class="bienvenida"></div>
             <nav class="menu">
                 <ul>
+                    <li class="list"> <button id="sign-up">Sign up</button></li>
                     <li class="list"> <a href="#">Inicio</a></li>
                     <li class="list"> <a href="./pages/productos.html">Productos</a></li>
-                    <li class="list"> <a href="./pages/servicios.html">Servicios</a></li>
                     <li class="list"> <a href="./pages/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </header>
+
+    <section class="formulario-hidden">
+        <form action=" ">
+            <input type="text" placeholder="Nombre" id="nombre" required>
+            <input type="text" placeholder="Apellido" id="apellido" required>
+            <input type="date" placeholder="Edad" id="edad" required>
+            <input type="email" placeholder="Correo" id="correo" required>
+            <input type="password" placeholder="Contraseña" id="contrasena" required>
+            <input type="password" placeholder="Confirmar contrasena" id="confirmar" required>
+            <button class="submit">Registrarse</button>
+        </form>
+    </section>
 
         <section class="bg">
             <h1 class="titulo"></h1>
@@ -45,9 +62,5 @@
         <footer>
 
         </footer>
-
-    <script src="js/productos.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/estilos.js"></script>
 </body>
 </html>
