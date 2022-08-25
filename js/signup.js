@@ -16,7 +16,7 @@ const submit = document.querySelector('.submit');
 const validarFormulario = () => {
     return new Promise((resolve, reject) => {
         if (nombre.value.length > 0 && apellido.value.length > 0 && edad.value.length > 0 && correo.value.length > 0 && contrasena.value.length > 0 && confirmarContrasena.value.length > 0) {
-            if (contrasena.value === confirmarContrasena.value && contrasena.value.length >= 6) {
+            if (contrasena.value === confirmarContrasena.value && contrasena.value.length >= 6 && confirmarContrasena.value.length >= 6) {
                 resolve();
             } else if (contrasena.value.length < 6) {
                 reject('La contraseña debe tener al menos 6 caracteres');
