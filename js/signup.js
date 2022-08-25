@@ -26,16 +26,20 @@ const validarFormulario = () => {
                     backgroundColor: "linear-gradient(to right, #ff0000, #d80254)",
                     }).showToast();
             } else {
-                reject('Las contraseñas no coinciden');
-                confirmarContrasena.classList.add('error');
-                Toastify({
+                reject(Toastify({
                     text: "Las contraseñas no coinciden",
                     duration: 3000,
                     backgroundColor: "linear-gradient(to right, #ff0000, #d80254)",
-                    }).showToast();
+                    }).showToast());
+                confirmarContrasena.classList.add('error');
             }
         } else {
             reject('Todos los campos son obligatorios');
+            Toastify({
+                text: "Todos los campos son obligatorios",
+                duration: 3000,
+                backgroundColor: "linear-gradient(to right, #ff0000, #d80254)",
+                }).showToast(); 
         }
     })
 }
