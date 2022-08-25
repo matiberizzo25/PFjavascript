@@ -272,7 +272,13 @@ form .submit {
 .formulario-hidden {
   transition: all 3s;
   display: none;
+  opacity: 0;
+  margin-top: 150px;
+  margin-left: 42%;
   position: absolute;
+}
+.formulario-hidden form {
+  grid-column: 3;
 }
 
 .formulario-show {
