@@ -5,7 +5,7 @@
     "plataforma":"XBOX",
     "stock":73,
     "precio":554,
-    "foto":"../assets/1.jpg"
+    "foto":"./assets/1.jpg"
 },
 {
     "id":2,
@@ -21,7 +21,7 @@
     "plataforma":"XBOX",
     "stock":30,
     "precio":554,
-    "foto":"../assets/3.jpg"
+    "foto":"/assets/3.jpg"
 },
 {
     "id":4,
@@ -29,7 +29,7 @@
     "plataforma":"PS4",
     "stock":93,
     "precio":14000,
-    "foto":"../assets/4.jpg"
+    "foto":"assets/4.jpg"
 },
 {
     "id":5,

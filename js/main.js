@@ -4,7 +4,6 @@ let carrito = [];
 
 const sectionProducts = document.querySelector('#products');
 
-
     fetch('./js/products.json')
         .then(res => res.json())
         .then(json => {
