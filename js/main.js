@@ -4,25 +4,15 @@ let carrito = [];
 
 const sectionProducts = document.querySelector('#products');
 
-fetch('../json/data.json')
-    .then((res)=> res.json())
-    .then((json)=>{
-        json.forEach(product =>{
-            let nuevoProducto = document.createElement('div');
-            nuevoProducto.className = 'product';
-            nuevoProducto.innerHTML = `
-                                        <h3 class='title'> ${product.titulo} </h3>
-                                        <img src='${product.foto}' alt='' class='productPic'>
-                                        <p class='price'>Precio: $${product.precio}</p>
-                                        <p class='platform'>Plataforma: <span class='acento'>${product.plataforma}</span></p>
-                                        <button class='addProduct' id='${product.id}'> Agregar Producto </button>
-                                        `;
-            sectionProducts.appendChild(nuevoProducto);
-            $(`#${product.id}`).click(()=>{
-                agregarCarrito(`${product.id}`,json)
-            })
-        })
-    });
+const fetchJson = (url) => {
+    fetch(url)
+        .then(res => res.json())
+        .then(json => {
+            renderProductos(json);
+        }).catch(err => console.log(err));
+}
+
+fetchJson('../js/products.json');
 
 // Creacion y seleccion de elementos:
 
@@ -102,6 +92,26 @@ const vaciarCarrito = () =>{
     carrito = [];
 }
 
+// funcion para renderizar los productos
+
+const renderProductos = (res) => {
+    res.forEach(product => {
+        let nuevoProducto = document.createElement('div');
+        nuevoProducto.className = 'product';
+        nuevoProducto.innerHTML = `
+                                    <h3 class='title'> ${product.titulo} </h3>
+                                    <img src='${product.foto}' alt='' class='productPic'>
+                                    <p class='price'>Precio: $${product.precio}</p>
+                                    <p class='platform'>Plataforma: <span class='acento'>${product.plataforma}</span></p>
+                                    <button class='addProduct' id='${product.id}'> Agregar Producto </button>
+                                    `;
+        sectionProducts.appendChild(nuevoProducto);
+        $(`#${product.id}`).click(()=>{
+            agregarCarrito(`${product.id}`,json)
+        })
+    })
+}
+
 // tenemos que asignarle a cantidad de productos y a monto total que se escriban con el localStorage asi no perdemos los datos al actualizar la pagina.
 
 fetch(' https://jsonplaceholder.typicode.com/users')
@@ -109,3 +119,4 @@ fetch(' https://jsonplaceholder.typicode.com/users')
     .then(json => {
         console.log(json);
     }).catch(err => console.log(err));
+
