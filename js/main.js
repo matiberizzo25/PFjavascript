@@ -1,7 +1,5 @@
 // Inicializamos el array de carrito, luego lo utilizaremos para el LocalStorage:
 
-window.addEventListener('load',()=>{
-
 let carrito = [];
 
 const sectionProducts = document.querySelector('#products');
@@ -78,7 +76,6 @@ buttonEnd.onclick = () => {
 const agregarCarrito = (id,direction) =>{
     carrito.push(direction.find(prods => prods.id == id));
     localStorage.setItem("Carrito", JSON.stringify(carrito));
-    console.log(carrito);
     calcularCarrito();
     Swal.fire({
         text: '¡Producto agregado al carrito!',
@@ -104,6 +101,12 @@ const vaciarCarrito = () =>{
     localStorage.removeItem('Carrito');
     carrito = [];
 }
-});
 
 // tenemos que asignarle a cantidad de productos y a monto total que se escriban con el localStorage asi no perdemos los datos al actualizar la pagina.
+
+fetch(' https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(json => {
+        console.log(json);
+    }).catch(err => console.log(err));
+
