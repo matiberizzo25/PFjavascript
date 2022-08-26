@@ -4,16 +4,29 @@ let carrito = [];
 
 const sectionProducts = document.querySelector('#products');
 
-const fetchJson = (url) => {
-    fetch(url)
+
+    fetch('../json/products.json')
         .then(res => res.json())
         .then(json => {
-            renderProductos(json);
+            json.forEach(product => {
+                let nuevoProducto = document.createElement('div');
+                nuevoProducto.className = 'product';
+                nuevoProducto.innerHTML = `
+                                            <h3 class='title'> ${product.titulo} </h3>
+                                            <img src='${product.foto}' alt='' class='productPic'>
+                                            <p class='price'>Precio: $${product.precio}</p>
+                                            <p class='platform'>Plataforma: <span class='acento'>${product.plataforma}</span></p>
+                                            <button class='addProduct' id='${product.id}'> Agregar Producto </button>
+                                            `;
+                sectionProducts.appendChild(nuevoProducto);
+                $(`#${product.id}`).click(()=>{
+                    agregarCarrito(`${product.id}`, json)
+                })
+            })
         })
         .catch(err => console.log('No se pudo cargar el JSON: ' + err))
-}
 
-fetchJson('../js/products.json');
+
 
 // Creacion y seleccion de elementos:
 
@@ -52,7 +65,7 @@ buttonEnd.onclick = () => {
         if (result.isConfirmed) {
         Swal.fire({
             title: 'Compra Finalizada!',
-            html: '<p class="mondongo">Tu compra se finalizo con exito.</p>',
+            html: '<p>Tu compra se finalizo con exito.</p>',
             background: '#121212',
             confirmButtonColor: '#111111',
         }
@@ -64,8 +77,8 @@ buttonEnd.onclick = () => {
 
 // funciones para agregar al carrito, calcularlo y vaciarlo
 
-const agregarCarrito = (id,direction) =>{
-    carrito.push(direction.find(prods => prods.id == id));
+const agregarCarrito = (id,url) =>{
+    carrito.push(url.find(prods => prods.id == id));
     localStorage.setItem("Carrito", JSON.stringify(carrito));
     calcularCarrito();
     Swal.fire({
@@ -93,26 +106,6 @@ const vaciarCarrito = () =>{
     carrito = [];
 }
 
-// funcion para renderizar los productos
-
-const renderProductos = (res) => {
-    res.forEach(product => {
-        let nuevoProducto = document.createElement('div');
-        nuevoProducto.className = 'product';
-        nuevoProducto.innerHTML = `
-                                    <h3 class='title'> ${product.titulo} </h3>
-                                    <img src='${product.foto}' alt='' class='productPic'>
-                                    <p class='price'>Precio: $${product.precio}</p>
-                                    <p class='platform'>Plataforma: <span class='acento'>${product.plataforma}</span></p>
-                                    <button class='addProduct' id='${product.id}'> Agregar Producto </button>
-                                    `;
-        sectionProducts.appendChild(nuevoProducto);
-        $(`#${product.id}`).click(()=>{
-            agregarCarrito(`${product.id}`,json)
-        })
-    })
-}
-
 // tenemos que asignarle a cantidad de productos y a monto total que se escriban con el localStorage asi no perdemos los datos al actualizar la pagina.
 
 fetch(' https://jsonplaceholder.typicode.com/users')
@@ -120,4 +113,3 @@ fetch(' https://jsonplaceholder.typicode.com/users')
     .then(json => {
         console.log(json);
     }).catch(err => console.log(err));
-

@@ -15,5 +15,5 @@ changeBtn.forEach(change => {
     change.addEventListener('click',(e)=>{
         bg.classList.toggle('bg2');
     })    
-});
+})
 
