@@ -9,7 +9,8 @@ const fetchJson = (url) => {
         .then(res => res.json())
         .then(json => {
             renderProductos(json);
-        }).catch(err => console.log(err));
+        })
+        .catch(err => console.log('No se pudo cargar el JSON: ' + err))
 }
 
 fetchJson('../json/products.json');
