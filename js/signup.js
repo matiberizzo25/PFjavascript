@@ -1,5 +1,3 @@
-
-
 // Seleccion del DOM
 
 const formulario = document.querySelector('.formulario');
@@ -39,14 +37,7 @@ const enviarDatos = () => {
             text: res,
             duration: 3000,
             newWindow: true,
-            close: true,
-            gravity: 'top', // `top` or `bottom`
-            position: 'left', // `left`, `center` or `right`
             backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
-            stopOnFocus: true, // Prevents dismissing of toast on hover
-            onClick: function () {
-                window.location.href = "./pages/signup.html";
-            }
         }).showToast();
         const datos = nombre.value + ' ' + apellido.value;
         setTimeout(() => {
@@ -81,3 +72,7 @@ goBack.addEventListener('click',(e)=>{
 submit.addEventListener('click', enviarDatos);
 
 // Funcion para comprobar el signUp
+
+//create a function to generate a random password
+
+
