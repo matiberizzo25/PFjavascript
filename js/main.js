@@ -13,7 +13,7 @@ const fetchJson = (url) => {
         .catch(err => console.log('No se pudo cargar el JSON: ' + err))
 }
 
-fetchJson('../json/products.json');
+fetchJson('../js/products.json');
 
 // Creacion y seleccion de elementos:
 
