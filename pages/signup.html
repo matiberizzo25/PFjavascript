@@ -5,19 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="../js/signup.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script  src="../js/signup.js" defer></script>
 </head>
 <body>
-    <section class="formulario-hidden">
-        <form action=" ">
+    <header class="navBar">
+        <button class="back">Volver</a>
+    </header>
+
+    <section class="formulario">
+        <form>
+            <label for="Nombre">Nombre</label>
             <input type="text" placeholder="Nombre" id="nombre" required>
-            <input type="text" placeholder="Apellido" id="apellido" required>
-            <input type="date" placeholder="Edad" id="edad" required>
+            <label for="Apellido">Apellido</label>
+            <input type="text" placeholder="Apellido" id="apellido">
+            <label for="Edad">Edad</label>
+            <input type="number" placeholder="Edad" id="edad" required>
+            <label for="Correo">Correo</label>
             <input type="email" placeholder="Correo" id="correo" required>
+            <label for="contrasena">Contraseña</label>
             <input type="password" placeholder="Contraseña" id="contrasena" required>
+            <label for="Confirmar contraseña">Confirmar Contraseña</label>
             <input type="password" placeholder="Confirmar contrasena" id="confirmar" required>
             <button class="submit">Registrarse</button>
         </form>

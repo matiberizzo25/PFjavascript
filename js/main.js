@@ -107,8 +107,19 @@ const vaciarCarrito = () =>{
 
 // tenemos que asignarle a cantidad de productos y a monto total que se escriban con el localStorage asi no perdemos los datos al actualizar la pagina.
 
-fetch(' https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    .then(json => {
-        console.log(json);
-    }).catch(err => console.log(err));
+const signUp = document.getElementById('sign-up');
+
+signUp.addEventListener('click',(e)=>{
+    window.location.href = "./pages/signup.html";
+})
+
+const comprobarSignUp = ()  => {
+    if (localStorage.getItem('datos')) {
+        signUp.remove();
+        let elementoUsuario = document.createElement('h3');
+        elementoUsuario.innerHTML = `Bienvenido ${localStorage.getItem('datos')}`;
+        document.body.appendChild(elementoUsuario);
+    }
+}
+
+comprobarSignUp();
