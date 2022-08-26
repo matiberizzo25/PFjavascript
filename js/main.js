@@ -4,6 +4,8 @@ let carrito = [];
 
 const sectionProducts = document.querySelector('#products');
 
+// Luego haremos el fetch de manera mas limpia con una funcion const fetchProducts = async () => 
+
     fetch('./js/products.json')
         .then(res => res.json())
         .then(json => {
@@ -24,8 +26,6 @@ const sectionProducts = document.querySelector('#products');
             })
         })
         .catch(err => console.log('No se pudo cargar el JSON: ' + err))
-
-
 
 // Creacion y seleccion de elementos:
 
