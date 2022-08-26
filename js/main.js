@@ -5,7 +5,7 @@ let carrito = [];
 const sectionProducts = document.querySelector('#products');
 
 
-    fetch('../json/products.json')
+    fetch('../js/products.json')
         .then(res => res.json())
         .then(json => {
             json.forEach(product => {
