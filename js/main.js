@@ -12,7 +12,7 @@ const fetchJson = (url) => {
         }).catch(err => console.log(err));
 }
 
-fetchJson('../js/products.json');
+fetchJson('../json/products.json');
 
 // Creacion y seleccion de elementos:
 
