@@ -1,9 +1,9 @@
 [
     {
     "id":1,
-    "titulo":"Mad Max"
-    ,"plataforma":"XBOX"
-    ,"stock":73,
+    "titulo":"Mad Max",
+    "plataforma":"XBOX",
+    "stock":73,
     "precio":554,
     "foto":"./assets/1.jpg"
 },
