@@ -68,6 +68,10 @@ li{
     text-shadow: 0px 0px 10px #F21D56;
 }
 
+.error{
+    color: #fc2c2c;
+}
+
 button{
     margin-top: 10px;
     padding: 0.8em 1.8em;
@@ -90,7 +94,6 @@ button{
     }
 }
 
-
 .navBar{
     display: grid;
     position: fixed;
@@ -100,6 +103,10 @@ button{
     height: var(--header-height);
     z-index: 100;
     transition: all .5s;
+
+    .username{
+        font-size: 1.2em;
+    }
 
     .back{
         margin-left: 10px;
@@ -122,6 +129,17 @@ button{
 
         &:hover{
             transform:translate(20px);
+        }
+    }
+
+    .bienvenida{
+        grid-column: 1/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            font-weight: 300;
         }
     }
 
@@ -289,7 +307,7 @@ footer{
     padding: 15px;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
 
@@ -312,6 +330,10 @@ footer{
         button{
             width: 42%;
         }
+    }
+
+    .instructions{
+        padding: 10px;
     }
 }
 

@@ -64,6 +64,10 @@ li {
   text-shadow: 0px 0px 10px #F21D56;
 }
 
+.error {
+  color: #fc2c2c;
+}
+
 button {
   margin-top: 10px;
   padding: 0.8em 1.8em;
@@ -95,6 +99,9 @@ button:hover {
   z-index: 100;
   transition: all 0.5s;
 }
+.navBar .username {
+  font-size: 1.2em;
+}
 .navBar .back {
   margin-left: 10px;
   color: var(--color-blanco);
@@ -114,6 +121,15 @@ button:hover {
 }
 .navBar .logo:hover {
   transform: translate(20px);
+}
+.navBar .bienvenida {
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navBar .bienvenida p {
+  font-weight: 300;
 }
 .navBar .input-container {
   display: flex;
@@ -261,7 +277,7 @@ footer {
   padding: 15px;
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
 }
@@ -282,6 +298,9 @@ footer {
 }
 .formulario form button {
   width: 42%;
+}
+.formulario .instructions {
+  padding: 10px;
 }
 
 /* MEDIA QUERIES */

@@ -1,14 +1,15 @@
-// Seleccion del DOM
-
-const formulario = document.querySelector('.formulario');
-const nombre = document.getElementById('nombre');
-const apellido = document.getElementById('apellido');
-const edad = document.getElementById('edad');
-const correo = document.getElementById('correo');
-const contrasena = document.getElementById('contrasena');
-const confirmarContrasena = document.getElementById('confirmar');
-const submit = document.querySelector('.submit');
-const goBack = document.querySelector('.back');
+import {
+    formulario,
+    nombre,
+    apellido,
+    edad,
+    correo,
+    contrasena,
+    confirmarContrasena,
+    submit,
+    goBack,
+    instructionList
+} from "../export/dom.js"
 
 // Validacion del formulario
 
@@ -19,12 +20,14 @@ const validarFormulario = () => {
                 resolve('¡Formulario enviado correctamente!');
             } else if (contrasena.value.length < 6) {
                 reject('La contraseña debe tener al menos 6 caracteres');
+                instructionList[0].classList.add('error');
             } else {
                 reject('Las contraseñas no coinciden');
-                confirmarContrasena.classList.add('error');
+                instructionList[1].classList.add('error');
             }
         } else {
             reject('Todos los campos son obligatorios');
+            instructionList[2].classList.add('error');
         }
     })
 }
@@ -70,9 +73,3 @@ goBack.addEventListener('click',(e)=>{
 // Evento del boton submit
 
 submit.addEventListener('click', enviarDatos);
-
-// Funcion para comprobar el signUp
-
-//create a function to generate a random password
-
-

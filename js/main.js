@@ -1,10 +1,33 @@
-// Inicializamos el array de carrito, luego lo utilizaremos para el LocalStorage:
+import {
+    sectionProducts,
+    sectionCarrito,
+    signUp,
+    bienvenida,
+    totalCompra,
+    montoTotalCompra,
+    cantProductos,
+    buttonEnd,
+    logOut,appendElements
+} from "../export/dom.js";
+
 
 let carrito = [];
 
-const sectionProducts = document.querySelector('#products');
+// Atributos, clases y html de los elementos del DOM.
 
-// Luego haremos el fetch de manera mas limpia con una funcion const fetchProducts = async () => 
+logOut.className = 'log-out';
+totalCompra.className = 'contenedorCarrito';
+buttonEnd.className = 'btnEnd';
+
+logOut.innerHTML = 'Log Out';
+totalCompra.innerHTML = `<h2> Carrito </h2>`;
+montoTotalCompra.innerHTML = '$0';
+cantProductos.innerHTML = 'Cantidad de productos: 0';
+buttonEnd.innerHTML = 'Finalizar Compra';
+
+appendElements();
+
+// fetch al json de productos para renderizarlo en el DOM.
 
     fetch('./js/products.json')
         .then(res => res.json())
@@ -24,30 +47,9 @@ const sectionProducts = document.querySelector('#products');
                     agregarCarrito(`${product.id}`, json)
                 })
             })
-        })
-        .catch(err => console.log('No se pudo cargar el JSON: ' + err))
+        }).catch(err => console.log('No se pudo cargar el JSON: ' + err))
 
-// Creacion y seleccion de elementos:
-
-const sectionCarrito = document.getElementById('carrito');
-
-const totalCompra = document.createElement('div');
-const montoTotalCompra = document.createElement('h3');
-const cantProductos = document.createElement('p');
-const buttonEnd = document.createElement('button');
-
-totalCompra.className = 'contenedorCarrito';
-buttonEnd.className = 'btnEnd';
-
-totalCompra.innerHTML = `<h2> Carrito </h2> `;
-montoTotalCompra.innerHTML = '$0';
-cantProductos.innerHTML = 'Cantidad de productos: 0';
-buttonEnd.innerHTML = 'Finalizar Compra';
-
-sectionCarrito.appendChild(totalCompra);
-totalCompra.appendChild(montoTotalCompra);
-totalCompra.appendChild(cantProductos);
-totalCompra.appendChild(buttonEnd);
+// evento del boton de finalizar compra.
 
 buttonEnd.onclick = () => {
     const precioFinal = montoTotalCompra.innerText;
@@ -105,10 +107,6 @@ const vaciarCarrito = () =>{
     carrito = [];
 }
 
-// tenemos que asignarle a cantidad de productos y a monto total que se escriban con el localStorage asi no perdemos los datos al actualizar la pagina.
-
-const signUp = document.getElementById('sign-up');
-
 signUp.addEventListener('click',(e)=>{
     window.location.href = "./pages/signup.html";
 })
@@ -116,23 +114,31 @@ signUp.addEventListener('click',(e)=>{
 const comprobarSignUp = ()  => {
     if (localStorage.getItem('datos')) {
         signUp.remove();
-        let elementoUsuario = document.createElement('h3');
-        elementoUsuario.innerHTML = `Bienvenido ${localStorage.getItem('datos')}`;
-        document.body.appendChild(elementoUsuario);
+        const interaction = document.getElementById('interaction');
+        interaction.appendChild(logOut);
+        let elementoUsuario = document.createElement('p');
+        elementoUsuario.className = 'username';
+        elementoUsuario.innerHTML = `Bienvenido <span>${localStorage.getItem('datos')}</span>`;
+        bienvenida.appendChild(elementoUsuario);
     }
-}
+} 
 
 comprobarSignUp();
 
-
-// Generaremos un codigo random para darle al usuario cuando este logueado y asi pueda obtener descuentos.
-
-const generatePassword = () => {
-    var length = 8,
-        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-        retVal = "";
-    for (var i = 0, n = charset.length; i < length; ++i) {
-        retVal += charset.charAt(Math.floor(Math.random() * n));
-    }
-    return retVal;
+logOut.addEventListener('click',(e)=>{
+    Swal.fire({
+        title: '¿Quieres cerrar sesión?',
+        icon: 'warning',
+        background: '#121212',
+        showCancelButton: true,
+        confirmButtonColor: '#111111',
+        cancelButtonColor: '#111111',
+        confirmButtonText: 'Cerrar Sesión'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            localStorage.removeItem('datos');
+            window.location.href = "./index.html";
+        }
+    })
 }
+)

@@ -10,12 +10,10 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <script  src="../js/signup.js" defer></script>
+    <script  src="../js/signup.js" defer type="module"></script>
 </head>
 <body>
-    <header class="navBar">
-        <button class="back">Volver</a>
-    </header>
+    <header class="navBar"></header>
 
     <section class="formulario">
         <form>
@@ -33,6 +31,16 @@
             <input type="password" placeholder="Confirmar contrasena" id="confirmar" required>
             <button class="submit">Registrarse</button>
         </form>
+    <aside class="instructions">
+        <h4>Asegurate de que:</h4>
+        <ul>
+            <li class="non-chars">Tus contraseñas tengan como minimo 6 caracteres</li>
+            <li class="non-coinc">Tus contraseñas coincidan</li>
+            <li class="white-space">No dejaste ningun espacio en blanco</li>
+            <li><button class="back">Volver</a>
+            </li>
+        </ul>
+    </aside>
     </section>
 </body>
 </html>

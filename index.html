@@ -8,18 +8,18 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script src="js/main.js" defer> </script>
+    <script src="js/main.js" type="module" defer> </script>
     <script src="js/estilos.js" defer> </script>
     <link rel="stylesheet" href="css/styles.css">
     <title>ESVideoGames</title>
 </head>
 <body class="gridContainer">
         <header class="navBar">
-            <a href="#"><img src="assets/logo1.png" alt="" class="logo"></a>
+        <!--<a href="#"><img src="assets/logo1.png" alt="" class="logo"></a> -->
             <div class="bienvenida"></div>
             <nav class="menu">
                 <ul>
-                    <li class="list"> <button id="sign-up">Sign up</button></li>
+                    <li class="list" id="interaction"> <button id="sign-up">Sign up</button></li>
                     <li class="list"> <a href="#">Inicio</a></li>
                     <li class="list"> <a href="./pages/productos.html">Productos</a></li>
                     <li class="list"> <a href="./pages/contacto.html">Contacto</a></li>
@@ -44,7 +44,6 @@
         </section>
 
         <footer>
-
         </footer>
 </body>
 </html>
