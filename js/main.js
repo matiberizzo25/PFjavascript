@@ -1,3 +1,4 @@
+
 import {
     sectionProducts,
     sectionCarrito,
@@ -44,7 +45,12 @@ appendElements();
                                             `;
                 sectionProducts.appendChild(nuevoProducto);
                 $(`#${product.id}`).click(()=>{
-                    agregarCarrito(`${product.id}`, json)
+                    agregarCarrito(`${product.id}`, json,
+                    `<h3 class='title'>${product.titulo}</h3>
+                    <p class='categoria'>Categoria: ${product.categoria}</p>
+                    <p class='price'>Precio: $${product.precio}</p>
+                    <p class='platform'>Plataforma: <span class='acento'>${product.plataforma}</span></p>
+                    `);
                 })
             })
         }).catch(err => console.log('No se pudo cargar el JSON: ' + err))
@@ -78,14 +84,28 @@ buttonEnd.onclick = () => {
 
 // funciones para agregar al carrito, calcularlo y vaciarlo
 
-const agregarCarrito = (id,url) =>{
-    carrito.push(url.find(prods => prods.id == id));
-    localStorage.setItem("Carrito", JSON.stringify(carrito));
-    calcularCarrito();
+const agregarCarrito = (id,url,prodProperty) =>{
     Swal.fire({
-        text: '¡Producto agregado al carrito!',
+        title: '¿Agregar al carrito?',
+        html: prodProperty,
         background: '#121212',
-        confirmButtonColor: '#111111'
+        confirmButtonColor: '#111111',
+        cancelButtonColor: '#111111',
+        showCancelButton: true,
+        confirmButtonText: 'Agregar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: '¡Producto agregado!',
+                html: '<p>El producto se agrego al carrito.</p>',
+                background: '#121212',
+                confirmButtonColor: '#111111',
+            }
+            )
+            carrito.push(url.find(prods => prods.id == id));
+            localStorage.setItem("Carrito", JSON.stringify(carrito));
+            calcularCarrito();
+        }
     })
 }
 
@@ -120,6 +140,18 @@ const comprobarSignUp = ()  => {
         elementoUsuario.className = 'username';
         elementoUsuario.innerHTML = `Bienvenido <span>${localStorage.getItem('datos')}</span>`;
         bienvenida.appendChild(elementoUsuario);
+    }
+    else {
+        setInterval(() => {
+            Toastify({
+                text: '¡Logueate para obtener increibles beneficios!',
+                duration: 3000,
+                gravity: 'bottom',
+                position: 'right',
+                backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
+            }).showToast();
+        }, 30000);
+
     }
 } 
 

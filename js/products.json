@@ -5,7 +5,8 @@
     "plataforma":"XBOX",
     "stock":73,
     "precio":554,
-    "foto":"./assets/1.jpg"
+    "foto":"./assets/1.jpg",
+    "categoria": "indie"
 },
 {
     "id":2,
@@ -13,7 +14,8 @@
     "plataforma":"XBOX",
     "stock":29,
     "precio":233,
-    "foto":"./assets/2.jpg"
+    "foto":"./assets/2.jpg",
+    "categoria": "indie"
 },
 {
     "id":3,
@@ -21,7 +23,8 @@
     "plataforma":"XBOX",
     "stock":30,
     "precio":554,
-    "foto":"./assets/3.jpg"
+    "foto":"./assets/3.jpg",
+    "categoria": "suspenso"
 },
 {
     "id":4,
@@ -29,7 +32,8 @@
     "plataforma":"PS4",
     "stock":93,
     "precio":14000,
-    "foto":"./assets/4.jpg"
+    "foto":"./assets/4.jpg",
+    "categoria": "deportes"
 },
 {
     "id":5,
@@ -37,7 +41,8 @@
     "plataforma":"PS4",
     "stock":73,
     "precio":554,
-    "foto":"./assets/5.jpg"
+    "foto":"./assets/5.jpg",
+    "categoria": "accion"
 },
 {
     "id":6,
@@ -45,7 +50,8 @@
     "plataforma":"PS4",
     "stock":43,
     "precio":18000,
-    "foto":"./assets/6.jpg"
+    "foto":"./assets/6.jpg",
+    "categoria": "aventura"
 },
 {
     "id":7,
@@ -53,7 +59,8 @@
     "plataforma":"PS4",
     "stock":12,
     "precio":10000,
-    "foto":"./assets/7.jpg"
+    "foto":"./assets/7.jpg",
+    "categoria": "aventura"
 },
 {
     "id":8,
@@ -61,7 +68,8 @@
     "plataforma":"PS4",
     "stock":83,
     "precio":7000,
-    "foto":"./assets/8.png"
+    "foto":"./assets/8.png",
+    "categoria": "shooter"
 },
 {
     "id":9,
@@ -69,7 +77,8 @@
     "plataforma":"PS4",
     "stock":29,
     "precio":5000,
-    "foto":"./assets/9.jpg"
+    "foto":"./assets/9.jpg",
+    "categoria": "accion"
 },
 {
     "id":10,
@@ -77,7 +86,8 @@
     "plataforma":"PS4",
     "stock":47,
     "precio":15000,
-    "foto":"./assets/10.jpg"
+    "foto":"./assets/10.jpg",
+    "categoria": "accion"
 },
 {
     "id":11,
@@ -85,7 +95,9 @@
     "plataforma":"PS4",
     "stock":14,
     "precio":14000,
-    "foto":"./assets/11.jpeg"
+    "foto":"./assets/11.jpeg",
+    "categoria": "aventura"
+
 },
 {
     "id":12,
@@ -93,7 +105,8 @@
     "plataforma":"PS4",
     "stock":38,
     "precio":14000,
-    "foto":"./assets/12.jpg"
+    "foto":"./assets/12.jpg",
+    "categoria": "accion"
 },
 {
     "id":13,
@@ -101,7 +114,8 @@
     "plataforma":"PS4",
     "stock":15,
     "precio":15000,
-    "foto":"./assets/13.jpg"
+    "foto":"./assets/13.jpg",
+    "categoria": "accion"
 },
 {
     "id":14,
@@ -109,7 +123,8 @@
     "plataforma":"PS4",
     "stock":43,
     "precio":15000,
-    "foto":"./assets/14.jpg"
+    "foto":"./assets/14.jpg",
+    "categoria": "accion"
 },
 {
     "id":15,
@@ -117,7 +132,8 @@
     "plataforma":"PS4",
     "stock":51,
     "precio":12000,
-    "foto":"./assets/15.jpg"
+    "foto":"./assets/15.jpg",
+    "categoria": "accion"
 },
 {
     "id":16,
@@ -125,6 +141,7 @@
     "plataforma":"PS4",
     "stock":31,
     "precio":11000,
-    "foto":"./assets/16.jpg"
+    "foto":"./assets/16.jpg",
+    "categoria": "accion"
     }
 ]
