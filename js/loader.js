@@ -5,7 +5,7 @@ let welcomeLoader = () => {
     let loadSubText = document.createElement('h3')
     loadSubText.innerText = 'Bienvenido a '
     loadText.innerText = 'ESVIDEO GAMES';
-    loadText.className = 'animate__animated animate__fadeInDown animate__delay-3s animate__slow';
+    loadText.className = 'animate__animated animate__fadeIn animate__delay-3s animate__slow';
     loadSubText.className = 'animate__animated animate__fadeInDown animate__delay-1s animate__slow'; 
     loadPage.className = 'loader';
     document.body.appendChild(loadPage);
