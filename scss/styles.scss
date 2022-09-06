@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
 :root{
     --font-size-normal: 1rem;
     --font-size-grande: 1.5rem;
@@ -14,6 +16,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 3rem;
+    text-align: center;
+
+    .textShadow{
+        text-shadow: 0px 0px 20px #71bfc4d0;
+        transition: all .8s;
+    }
+    }
+
+
 
 input{
     max-width: 190px;
@@ -40,7 +65,7 @@ input{
 }
 
 body{
-    font-family: 'poppins';
+    font-family: 'Play', sans-serif;
     background-color: var(--color-secundario);
     color: var(--color-blanco);
 
@@ -62,10 +87,23 @@ li{
     list-style: none;
 }
 
+#sign-up{
+    transition: all .5s;
+
+    &:hover{
+        cursor: pointer;
+        text-shadow: 0px 0px 20px var(--color-blanco);
+    }
+}
+
+.log-out{
+    @extend #sign-up;
+}
+
 .acento{
     font-weight: 400;
     color: #f5f5f5cb ;
-    text-shadow: 0px 0px 10px #F21D56;
+    text-shadow: 0px 0px 10px #71bfc4d0;
 }
 
 .error{
@@ -184,53 +222,53 @@ button{
     backdrop-filter: blur(4px);
 }
 
-.bg{
-    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/fondo1.jpg");
+.parallax{
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/banner.png");
     height: calc(var(--header-height) + 90vh);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all .3s;
+    z-index: .1;
 
-    .changeBg{
-        border: none;
-        font-size: 2em;
-        }
-
-    .btn-1{
-        grid-column: 1;
-    }
-
-    .btn-2{
-        grid-column: -1;
-    }
-
-    .titulo{
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
+        color: var(--color-blanco);
+        font-size: 1.5em;
+        font-weight: 300;
+
+        .titulo{
+            font-size: 3rem;
+        }
+    
+        .button--parallax{
+            margin-top: 10px;
+        }
     }
 }
 
-.bg2{
-    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/3.jpg");
-    height: calc(var(--header-height) + 90vh);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    grid-template-columns: repeat(12,1fr);
-    align-items: center;
-    justify-content: center;
-    display: grid;
-    transition: all .3s;
+.sCart{
+    color: white;
+    margin-top: 5px;
+    font-size: 1rem;
+    transition: text-shadow .5s;
+
+    &:hover{
+        text-shadow: 0px 0px 20px white;
+    }
 }
 
 #products{
     display: grid;
     grid-template-columns: repeat(12,1fr);
+    background-color: var(--color-principal);
 
     .product{
         grid-column: 1/-1;
@@ -275,25 +313,61 @@ button{
     }
 }
 
-#carrito{
-    height: 30vh;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+#contenedor--carrito{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
-    .contenedorCarrito{
-        background-color: var(--color-principal);
-        margin-top: 10px;
-        margin-left: 10px;
-        padding: 15px;
-        box-shadow: 0px 0px 10px black;
-        text-align: center;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 2px;
-        grid-column:1;
+    a{
+        transition: all .5s;
+        &:hover{
+            text-shadow: 0px 0px 20px #71bfc4d0;
+        }
     }
+
+    #carrito{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+        border-radius: 15px;
+        padding: 15px;
+        width: 100%;
+
+        button{
+            margin-bottom: 1px;
+            width: 200px;
+        }
+    }
+
+    #carrito-prods{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: #070707c5;
+        padding: 10px;
+    }
+}
+
+
+.cartImg{
+    width: 300px;
+    height: 300px;
+    text-shadow: 0px 0px 10px black;
+    margin: 10px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px #070707;
+}
+
+.prod-info{
+    background-color: var(--color-principal);
+    padding: 10px;
 }
 
 footer{

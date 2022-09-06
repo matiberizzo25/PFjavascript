@@ -5,34 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/estilos.js" defer></script>
+    <script src="../js/carrito.js" defer type="module"></script>
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Contacto</title>
+    <title>Carrito</title>
 </head>
-<body>
+<body class="gridContainer">
     <header class="navBar">
         <div class="bienvenida"></div>
         <nav class="menu">
             <ul>
                 <li class="list" id="interaction"> <p id="sign-up">SIGN UP</p></li>
                 <li class="list"> <a href="../index.html">INICIO</a></li>
-                <li class="list"> <a href="./carrito.html">CARRITO</a> <span id="notif"></span></li>
-                <li class="list"> <a href="#">CONTACTO</a></li>
+                <li class="list"> <a href="#">CARRITO</a> <span id="notif"></span></li>
+                <li class="list"> <a href="./contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="parallax">
         <div class="info">
-            <h1>SECCION: CONTACTO</h1>
-            <a href="#contacto" class="sCart">VER CONTACTO</a>
+            <h1>SECCION: CARRITO</h1>
+            <a href="#carrito" class="sCart">VER CARRITO</a>
         </div>
     </section>
-
-    <footer>
-    </footer>
+    
+    <section id="contenedor--carrito">
+        <div id="carrito"></div>
+        <div id="carrito-prods"></div>
+    </section>
 </body>
 </html>

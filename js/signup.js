@@ -46,7 +46,7 @@ const enviarDatos = () => {
         setTimeout(() => {
             localStorage.setItem('datos', datos);
             window.location.href = "../index.html";
-        }, 3000);
+        }, 2000);
         
     }).catch(error => {
         Toastify({

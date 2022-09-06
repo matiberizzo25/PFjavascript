@@ -4,7 +4,7 @@
     "titulo":"Mad Max",
     "plataforma":"XBOX",
     "stock":73,
-    "precio":554,
+    "precio":3500,
     "foto":"./assets/1.jpg",
     "categoria": "indie"
 },
@@ -13,7 +13,7 @@
     "titulo":"Doom 64 standard",
     "plataforma":"XBOX",
     "stock":29,
-    "precio":233,
+    "precio":2800,
     "foto":"./assets/2.jpg",
     "categoria": "indie"
 },
@@ -22,7 +22,7 @@
     "titulo":"Stela",
     "plataforma":"XBOX",
     "stock":30,
-    "precio":554,
+    "precio":4500,
     "foto":"./assets/3.jpg",
     "categoria": "suspenso"
 },
@@ -31,7 +31,7 @@
     "titulo":"Gran Turismo 7",
     "plataforma":"PS4",
     "stock":93,
-    "precio":14000,
+    "precio":9999,
     "foto":"./assets/4.jpg",
     "categoria": "deportes"
 },
@@ -40,7 +40,7 @@
     "titulo":"LEGO Star Wars the Skywalker Saga",
     "plataforma":"PS4",
     "stock":73,
-    "precio":554,
+    "precio":7899,
     "foto":"./assets/5.jpg",
     "categoria": "accion"
 },
@@ -49,7 +49,7 @@
     "titulo":"Pokemon Legends",
     "plataforma":"PS4",
     "stock":43,
-    "precio":18000,
+    "precio":17900,
     "foto":"./assets/6.jpg",
     "categoria": "aventura"
 },
@@ -58,7 +58,7 @@
     "titulo":"Ghost of Tsuhishima",
     "plataforma":"PS4",
     "stock":12,
-    "precio":10000,
+    "precio":11000,
     "foto":"./assets/7.jpg",
     "categoria": "aventura"
 },
@@ -67,7 +67,7 @@
     "titulo":"Tom Clancys Rainbow Six Extraction",
     "plataforma":"PS4",
     "stock":83,
-    "precio":7000,
+    "precio":7200,
     "foto":"./assets/8.png",
     "categoria": "shooter"
 },
@@ -76,7 +76,7 @@
     "titulo":"God of War 4",
     "plataforma":"PS4",
     "stock":29,
-    "precio":5000,
+    "precio":5550,
     "foto":"./assets/9.jpg",
     "categoria": "accion"
 },
@@ -85,7 +85,7 @@
     "titulo":"Elden Ring",
     "plataforma":"PS4",
     "stock":47,
-    "precio":15000,
+    "precio":14700,
     "foto":"./assets/10.jpg",
     "categoria": "accion"
 },
@@ -94,7 +94,7 @@
     "titulo":"Horizon Forbiden West",
     "plataforma":"PS4",
     "stock":14,
-    "precio":14000,
+    "precio":13400,
     "foto":"./assets/11.jpeg",
     "categoria": "aventura"
 
@@ -113,7 +113,7 @@
     "titulo":"Deagon Ball Z: Kakarot",
     "plataforma":"PS4",
     "stock":15,
-    "precio":15000,
+    "precio":14999,
     "foto":"./assets/13.jpg",
     "categoria": "accion"
 },
@@ -122,7 +122,7 @@
     "titulo":"Demon Slayer The Hinokami Chronicles",
     "plataforma":"PS4",
     "stock":43,
-    "precio":15000,
+    "precio":14900,
     "foto":"./assets/14.jpg",
     "categoria": "accion"
 },

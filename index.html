@@ -9,41 +9,58 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="js/loader.js" defer></script>
     <script src="js/main.js" type="module" defer> </script>
     <script src="js/estilos.js" defer> </script>
     <link rel="stylesheet" href="css/styles.css">
-    <title>ESVideoGames</title>
+    <title>ESVideoGames</title> 
 </head>
 <body class="gridContainer">
         <header class="navBar">
             <div class="bienvenida"></div>
             <nav class="menu">
                 <ul>
-                    <li class="list" id="interaction"> <button id="sign-up">Sign up</button></li>
-                    <li class="list"> <a href="#">Inicio</a></li>
-                    <li class="list"> <a href="./pages/productos.html">Productos</a></li>
-                    <li class="list"> <a href="./pages/contacto.html">Contacto</a></li>
+                    <li class="list" id="interaction"> <p id="sign-up">SIGN UP</p></li>
+                    <li class="list"> <a href="#">INICIO</a></li>
+                    <li class="list"> <a href="./pages/carrito.html">CARRITO</a> <span id="notif"></span></li>
+                    <li class="list"> <a href="./pages/contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
         </header>
 
-        <section class="bg">
-            <h1 class="titulo"></h1>
-            <div class="btn-1">
-                <button class="changeBg">-</button>
+        <section class="parallax">
+            <div class="info">
+                <h1 class="titulo">JUEGOS A PRECIOS INCREIBLES</h1>
+                <small class="small--text">OFERTAS POR TIEMPO LIMITADO</small>
+                <button class="button--parallax">DESCUBRE MAS</button>
             </div>
-            <div class="btn-2">
-                <button class="changeBg">-</button>
-            </div>
+            
         </section>
-
         <section id="products">
         </section>
-
-        <section id="carrito">
+        <section id="contenedor--carrito" style="display: none;">
+            <div id="carrito"></div>
+            <div id="carrito-prods"></div>
         </section>
-
-        <footer>
-        </footer>
+<!--         <section id="learnMore">
+            <h1 class="titulo">¿POR QUE ELEGIRNOS?</h1>
+            <div class="learnMore--container">
+                <div class="learnMore--card">
+                    <img src="img/entrega.png" alt="Entrega">
+                    <h2>ENTREGA RAPIDA</h2>
+                    <p>Recibe tu pedido en 24 horas</p>
+                </div>
+                <div class="learnMore--card">
+                    <img src="img/seguridad.png" alt="Seguridad">
+                    <h2>SEGURIDAD</h2>
+                    <p>Compra con total seguridad</p>
+                </div>
+                <div class="learnMore--card">
+                    <img src="img/soporte.png" alt="Soporte">
+                    <h2>SOPORTE</h2>
+                    <p>Atencion al cliente 24/7</p>
+                </div>
+            </div>
+        </section> -->
 </body>
 </html>
