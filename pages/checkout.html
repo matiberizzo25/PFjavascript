@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="checkout">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3>Checkout</h3>
+                                <h5 class="card-subtitle text-muted">Complete su compra</h5>
+                            </div>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccion">Direccion</label>
+                                    <input type="text" class="form-control" id="direccion" placeholder="Calle, altura, ciudad" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo electronico</label>
+                                    <input type="email" class="form-control" id="email" placeholder="
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Telefono</label>
+                                    <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tarjeta">Tarjeta de credito</label>
+                                    <input type="text" class="form-control" id="tarjeta" placeholder="Numero de tarjeta" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="codigo">Codigo de seguridad</label>
+                                    <input type="text" class="form-control" id="codigo" placeholder="Codigo de seguridad" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vencimiento">Vencimiento</label>
+                                    <input type="text" class="form-control" id="vencimiento" placeholder="Vencimiento" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dni">DNI</label>
+                                    <input type="text" class="form-control" id="dni" placeholder="DNI" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cuotas">Cuotas</label>
+                                    <select class="form-control" id="cuotas">
+                                        <option>1</option>
+                                        <option>3</option>
+                                        <option>6</option>
+                                        <option>9</option>
+                                        <option>12</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Comprar</button>
+                            </form>
+                        </div>
+                    </div>	
+                </div>
+    </section>
+    
+    <script src="js/checkout.js"></script>
+</body>
+</html>

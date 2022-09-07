@@ -56,7 +56,6 @@ const calcularCarrito = () =>{
     cantProds.innerText = `Productos: ${carrito.length}`;
 }
 
-
 const agregarCarrito = (id,url,prodProperty) =>{
     Swal.fire({
         title: '¿Agregar al carrito?',

@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #111111;
+  background: #000000;
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -195,7 +195,7 @@ button:hover {
   backdrop-filter: blur(4px);
 }
 
-.parallax {
+.parallax, .contact-container {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/banner.png");
   height: calc(var(--header-height) + 90vh);
   background-position: center center;
@@ -207,7 +207,7 @@ button:hover {
   justify-content: center;
   z-index: 0.1;
 }
-.parallax .info {
+.parallax .info, .contact-container .info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,11 +217,57 @@ button:hover {
   font-size: 1.5em;
   font-weight: 300;
 }
-.parallax .info .titulo {
+.parallax .info .titulo, .contact-container .info .titulo {
   font-size: 3rem;
 }
-.parallax .info .button--parallax {
+.parallax .info .button--parallax, .contact-container .info .button--parallax {
   margin-top: 10px;
+}
+
+.contact-container .info {
+  margin-bottom: 20px;
+  width: 300px;
+}
+.contact-container #consulta {
+  width: 100%;
+  padding: 5px;
+}
+.contact-container #SEND {
+  width: 500px;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2862745098);
+}
+.contact-container #SEND:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 10px #fff;
+}
+.contact-container .contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row: 0;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgba(73, 73, 73, 0.1098039216);
+}
+.contact-container .contact-form label {
+  margin-bottom: 5px;
+}
+.contact-container .contact-form .dfl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-container .contact-form .dfl:nth-child(5) {
+  grid-column: 1/-1;
+}
+
+.section-send {
+  width: 348px;
+}
+.section-send button {
+  width: 100%;
 }
 
 .sCart {
@@ -362,6 +408,48 @@ footer {
 }
 .formulario .instructions {
   padding: 10px;
+}
+
+/* SECCION FOOTER */
+footer {
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+footer .footer--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  height: 150px;
+  padding: 20px;
+  transition: all 0.3s;
+}
+footer .footer--card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+footer .footer--card:hover .footer--card--title {
+  text-shadow: 0px 0px 10px white;
+}
+footer .footer--card .footer--card--title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+footer .footer--card:first-child {
+  width: 400px;
+  border-right: 2px solid var(--color-terciario);
+}
+footer .footer--card:last-child {
+  width: 400px;
+  border-left: 2px solid var(--color-terciario);
 }
 
 /* MEDIA QUERIES */

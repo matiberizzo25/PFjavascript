@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/contacto.js" defer></script>
     <script src="../js/estilos.js" defer></script>
     <link rel="stylesheet" href="../css/styles.css">
     <title>Contacto</title>
@@ -24,15 +26,53 @@
             </ul>
         </nav>
     </header>
-
-    <section class="parallax">
+    <section class="parallax contact-container">
         <div class="info">
-            <h1>SECCION: CONTACTO</h1>
-            <a href="#contacto" class="sCart">VER CONTACTO</a>
+            <h1>CONTACTO</h1>
+            <p>Envianos tu mensaje. Estaremos respondiendo a la brevedad</p>
         </div>
+            <form action="" class="contact-form">
+                <div class="dfl">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+                <div class="dfl">  
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" required>
+                </div>
+                <div class="dfl">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="dfl">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" name="telefono" id="telefono" required>
+                </div>
+                <div class="dfl">
+                    <label for="consulta">Consulta</label>
+                    <textarea name="consulta" id="consulta" cols="30" rows="10" required></textarea>
+                </div>
+            </form>
+            <div class="section-send">
+                <button type="submit" id="enviar">ENVIAR</button>
+            </div>
     </section>
-
-    <footer>
-    </footer>
+            <footer>
+                <div class="footer--card">
+                    <h2 class="footer--card--title">ESVideoGames</h2>
+                    <p>ESVideoGames es una empresa dedicada a la venta de videojuegos de primera categoria ¡Estamos encantandos de que te encuentres aqui!</p>
+                </div>
+                <div class="footer--card">
+                    <h2 class="footer--card--title">CONTACTO</h2>
+                    <p>Telefono: 11-6630-1845</p>
+                    <p>Email: @ESVideoGames.com</p>
+                </div>
+                <div class="footer--card">
+                    <h2 class="footer--card--title">REDES SOCIALES</h2>
+                    <p>Facebook: ESVideoGames</p>
+                    <p>Twitter: @ESVideoGames</p>
+                    <p>Instagram: @ESVideoGames</p>
+                </div>
+        </footer>
 </body>
 </html>

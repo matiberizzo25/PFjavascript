@@ -1,0 +1,18 @@
+CAMBIOS IMPORTANTES
+
+- FUNCIONALIDADES:
+    -- asincronia con fetch para renderizar los productos (js/main.js): 17.
+    -- Se agregaron botones para agregar al carrito segun el id correspondiente (js/carrito.js): 59 (agregarCarrito()).
+    -- Se agrego la funcion de calculo que permite renderizar el monto final progresivamente (js/carrito.js): 48 (calcularCarrito()).
+    -- Se realizo el renderizado del carrito en funcion de los productos agregados (js/carrito.js)
+    -- Se agrego la funcion para finalizar la compra y una para vaciar el carrito (js/carrito.js): 84 (vaciarCarrito()).
+    -- Se agregaron funciones para el signUp y el signOut con su debida validacion (js/signup.js).
+- ESTILOS:
+    -- Evento scroll en header para glassmorphism (js/estilos.js).
+    -- Efecto parallax con JS en (js/estilos.js): 19.
+    -- Se agregaron animaciones con un loader para cuando se carga la pagina por primera vez (js/loader.js).
+    -- Se agregaron animaciones con animate.css a los HTMLs.
+- OTROS: 
+    -- Modificado el JSON de productos.
+- PROXIMOS:
+    -- Validacion del formulario de contacto en (js/contacto.js)

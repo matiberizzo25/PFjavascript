@@ -46,15 +46,27 @@ signUp.addEventListener('click',(e)=>{
     window.location.href = "./pages/signup.html";
 })
 
+let generarCodigo = () =>{
+    let code = '';
+    let numbChars = '0123456789'
+    let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    let minusChars = 'abcdefghijklmnopqrstuvwxyz'
+        for (let i = 0; i < 6; i++){
+            code+= numbChars.concat(chars,minusChars)[Math.floor(Math.random() * numbChars.concat(chars,minusChars).length)]
+        }
+        return code;
+    }
+
 const comprobarSignUp = ()  => {
     if (localStorage.getItem('datos')) {
         signUp.remove();
         const interaction = document.getElementById('interaction');
         interaction.appendChild(logOut);
         let elementoUsuario = document.createElement('p');
-        elementoUsuario.className = 'username';
+        elementoUsuario.className = 'username animate__animated animate__fadeIn animate__delay-1s animate__medium';
         elementoUsuario.innerHTML = `Bienvenido <span>${localStorage.getItem('datos')}</span>`;
         bienvenida.appendChild(elementoUsuario);
+        console.log(generarCodigo());
     }
     else {
         setInterval(() => {
@@ -94,7 +106,7 @@ const buttonParallax = document.querySelector('.button--parallax');
 
 buttonParallax.addEventListener('click',(e)=>{
     Swal.fire({
-        title: 'Aprovecha las ofertas de la semana!',
+        title: '¡Aprovecha las ofertas de la semana!',
         html: '<p>¡Durante solo esta semana con tu codigo de usuario tenes hasta un 50% de descuento en todos los juegos!</p><br><p>¡No te quedes sin tus juegos favoritos!</p>',
         icon: 'info',
         background: '#121212',

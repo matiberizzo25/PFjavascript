@@ -43,8 +43,10 @@ const enviarDatos = () => {
             backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
         }).showToast();
         const datos = nombre.value + ' ' + apellido.value;
+        const email = correo.value;
         setTimeout(() => {
             localStorage.setItem('datos', datos);
+            localStorage.setItem('email', email);
             window.location.href = "../index.html";
         }, 2000);
         
