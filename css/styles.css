@@ -36,7 +36,7 @@
   transition: all 0.8s;
 }
 
-input {
+input, #checkout .card .card-body form .form-group select {
   max-width: 190px;
   height: 30px;
   border: 2px solid transparent;
@@ -49,12 +49,12 @@ input {
   font-family: monospace;
   letter-spacing: 1px;
 }
-input:focus {
+input:focus, #checkout .card .card-body form .form-group select:focus {
   caret-color: #fa4753;
   color: #fa4753;
   box-shadow: 4px 4px 10px #070707;
 }
-input:focus::placeholder {
+input:focus::placeholder, #checkout .card .card-body form .form-group select:focus::placeholder {
   color: #fa4753;
 }
 
@@ -399,7 +399,7 @@ footer {
   justify-content: center;
   transition: all 0.5s;
 }
-.formulario form input {
+.formulario form input, .formulario #checkout .card .card-body form .form-group select, #checkout .card .card-body .formulario form .form-group select {
   margin: 10px;
   width: 100%;
 }
@@ -452,6 +452,70 @@ footer .footer--card:last-child {
   border-left: 2px solid var(--color-terciario);
 }
 
+/* CKECKOUT SECTION */
+#goBack {
+  position: absolute;
+  margin: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 4px 4px 2px #cccccc, -4px -4px 10px #ffffff;
+  border-radius: 10px;
+  color: var(--color-secundario);
+}
+
+#checkout {
+  color: #252525;
+  background-color: #f3f3f3;
+  height: 100vh;
+}
+#checkout .card {
+  display: flex;
+  justify-content: space-evenly;
+}
+#checkout .card .finalizar {
+  margin-top: 75px;
+  padding: 15px;
+  height: 100px;
+  border: 1px solid #a5a5a5;
+}
+#checkout .card .card-body form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 10px;
+  padding: 15px;
+  border: 1px solid #a5a5a5;
+  gap: 10px;
+}
+#checkout .card .card-body form button {
+  background-color: #f0f0f0;
+  box-shadow: 4px 4px 2px #cccccc, -4px -4px 10px #ffffff;
+  border-radius: 10px;
+  color: var(--color-secundario);
+  grid-column: 1/3;
+}
+#checkout .card .card-body form .form-group {
+  display: flex;
+  margin-bottom: 5px;
+  padding: 10px;
+  flex-direction: column;
+}
+#checkout .card .card-body form .form-group input, #checkout .card .card-body form .form-group select {
+  background: #f0f0f0;
+  box-shadow: 4px 4px 2px #cccccc, -4px -4px 10px #ffffff;
+  border-radius: 10px;
+  color: var(--color-secundario);
+  text-align: center;
+}
+#checkout .card .card-body form .form-group input::placeholder, #checkout .card .card-body form .form-group select::placeholder {
+  font-family: "Roboto", sans-serif;
+}
+#checkout .card .card-body form .form-group label {
+  margin-bottom: 5px;
+}
+#checkout .card .card-body .card-title {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
 /* MEDIA QUERIES */
 @media screen and (min-width: 700px) {
   .navBar .menu {

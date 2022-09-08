@@ -100,7 +100,7 @@ btnEnd.onclick = () => {
     const precioFinal = TotalCompra.innerText;
     Swal.fire({
         title: 'Quieres realizar la compra?',
-        html: `<h4>Precio final: ${precioFinal}</h4>`,
+        html: `<h4>Precio ${precioFinal}</h4>`,
         icon: 'warning',
         background: '#121212',
         showCancelButton: true,
@@ -109,14 +109,7 @@ btnEnd.onclick = () => {
         confirmButtonText: 'Finalizar Compra'
     }).then((result) => {
         if (result.isConfirmed) {
-        Swal.fire({
-            title: 'Compra Finalizada!',
-            html: '<p>Tu compra se finalizo con exito.</p>',
-            background: '#121212',
-            confirmButtonColor: '#111111',
-        }
-        )
-        vaciarCarrito();
+            window.location.href = "./checkout.html";
         }
     })
 }
