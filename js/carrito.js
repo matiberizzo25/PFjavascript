@@ -138,8 +138,5 @@ delAll.onclick = () => {
     })
 }
 
-
-
-
 export {agregarCarrito, calcularCarrito, vaciarCarrito}
 
