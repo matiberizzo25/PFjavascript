@@ -7,6 +7,7 @@ const logOut = document.createElement('p');
 // seleccion del DOM para el signUp
 
 const signUp = document.getElementById('sign-up');
+const interaction = document.getElementById('interaction');
 const formulario = document.querySelector('.formulario');
 const nombre = document.getElementById('nombre');
 const apellido = document.getElementById('apellido');
@@ -33,5 +34,6 @@ export {
     confirmarContrasena,
     submit,
     goBack,
-    instructionList
+    instructionList,
+    interaction
 }

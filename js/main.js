@@ -3,11 +3,10 @@ import {
     signUp,
     bienvenida,
     logOut,
+    interaction
 } from "../export/dom.js";
 
-import {
-    agregarCarrito
-    } from './carrito.js'
+import {agregarCarrito} from './carrito.js';
 
 // Atributos, clases y html de los elementos del DOM.
 
@@ -57,32 +56,6 @@ let generarCodigo = () =>{
         return code;
     }
 
-const comprobarSignUp = ()  => {
-    if (localStorage.getItem('datos')) {
-        signUp.remove();
-        const interaction = document.getElementById('interaction');
-        interaction.appendChild(logOut);
-        let elementoUsuario = document.createElement('p');
-        elementoUsuario.className = 'username animate__animated animate__fadeIn animate__delay-1s animate__medium';
-        elementoUsuario.innerHTML = `Bienvenido <span>${localStorage.getItem('datos')}</span>`;
-        bienvenida.appendChild(elementoUsuario);
-        console.log(generarCodigo());
-    }
-    else {
-        setInterval(() => {
-            Toastify({
-                text: '¡Logueate para obtener increibles beneficios!',
-                duration: 3000,
-                gravity: 'bottom',
-                position: 'right',
-                backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
-            }).showToast();
-        }, 30000);
-    }
-} 
-
-comprobarSignUp();
-
 logOut.addEventListener('click',(e)=>{
     Swal.fire({
         title: '¿Quieres cerrar sesión?',
@@ -99,6 +72,43 @@ logOut.addEventListener('click',(e)=>{
         }
     })
 })
+
+// Comprobación de datos en localStorage para mostrar el nombre del usuario en el DOM.
+
+const comprobarSignUp = ()  => {
+    return new Promise((resolve, reject) => {
+        if (localStorage.getItem('datos') && localStorage.getItem('email')){
+            resolve('Bienvenido de nuevo');
+        } else {
+            reject('No estas registrado');
+        }
+    })
+}
+
+const mostrarDatos = async () => {
+    comprobarSignUp()
+    .then(res =>{
+        signUp.remove();
+        interaction.appendChild(logOut);
+        let elementoUsuario = document.createElement('p');
+        elementoUsuario.className = 'username animate__animated animate__fadeIn animate__delay-1s animate__medium';
+        elementoUsuario.innerHTML = `Bienvenido <span>${localStorage.getItem('datos')}</span>`;
+        bienvenida.appendChild(elementoUsuario);
+        console.log(generarCodigo());
+    }).catch(err =>{
+        setInterval(() => {
+            Toastify({
+                text: '¡Logueate para obtener increibles beneficios!',
+                duration: 3000,
+                gravity: 'bottom',
+                position: 'right',
+                backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
+            }).showToast();
+        }, 30000);
+    })
+}
+
+mostrarDatos();
 
 // DOM PARA PARALLAX BOTON
 
