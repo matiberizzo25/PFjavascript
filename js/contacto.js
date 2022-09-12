@@ -1,40 +1,31 @@
-const nombre = document.getElementById('nombre');
-const apellido = document.getElementById('apellido');
-const email = document.getElementById('email');
-const telefono = document.getElementById('telefono');
-const consulta = document.getElementById('consulta');
-const enviar = document.getElementById('enviar');
+import expReg from "../export/expresiones.js";
+import {
+    nombre,
+    apellido,
+    email,
+    telefono,
+    consulta,
+    enviar
+} from "../export/dom.js";
 
 const validacionContacto = () => {
-    const expRegNombre = /^[a-zA-Z\s]{3,30}$/;
-    const expRegApellido = /^[a-zA-Z\s]{3,30}$/;
-    const expRegEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    const expRegTelefono = /^\d{10}$/;
-    const expRegConsulta = /^.{1,255}$/;
-    let validacion = true;
     return new Promise((resolve, reject) => {
         if (nombre.value.length > 0 && apellido.value.length > 0 && email.value.length > 0 && telefono.value.length > 0 && consulta.value.length > 0) {
-            if (expRegNombre.test(nombre.value) && expRegApellido.test(apellido.value) && expRegEmail.test(email.value) && expRegTelefono.test(telefono.value) && expRegConsulta.test(consulta.value)) {
+            if (expReg.eNombre.test(nombre.value) && expReg.eApellido.test(apellido.value) && expReg.eEmail.test(email.value) && expReg.eTelefono.test(telefono.value) && expReg.eConsulta.test(consulta.value)) {
                 resolve('¡Formulario enviado correctamente!');
-            } else if (!expRegNombre.test(nombre.value)) {
+            } else if (!expReg.eNombre.test(nombre.value)) {
                 reject('El nombre debe tener entre 3 y 30 caracteres y no puede contener números');
-                validacion = false;
-            } else if (!expRegApellido.test(apellido.value)) {
+            } else if (!expReg.eApellido.test(apellido.value)) {
                 reject('El apellido debe tener entre 3 y 30 caracteres y no puede contener números');
-                validacion = false;
-            } else if (!expRegEmail.test(email.value)) {
+            } else if (!expReg.eEmail.test(email.value)) {
                 reject('El email no es válido');
-                validacion = false;
-            } else if (!expRegTelefono.test(telefono.value)) {
+            } else if (!expReg.eTelefono.test(telefono.value)) {
                 reject('El teléfono debe tener 10 dígitos');
-                validacion = false;
-            } else if (!expRegConsulta.test(consulta.value)) {
+            } else if (!expReg.eConsulta.test(consulta.value)) {
                 reject('La consulta debe tener entre 1 y 255 caracteres');
-                validacion = false;
             }
         } else {
             reject('Todos los campos son obligatorios');
-            validacion = false;
         }
     })
 }

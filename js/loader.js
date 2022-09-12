@@ -1,3 +1,5 @@
+
+
 let welcomeLoader = () => {
     sessionStorage.setItem('welcome', 'true');
     let loadPage = document.createElement('div');

@@ -20,6 +20,17 @@ const submit = document.querySelector('.submit');
 const goBack = document.querySelector('.back');
 const instructionList = document.getElementsByTagName('li');
 
+// seleccion del DOM para validaciones
+
+const direccion =  document.getElementById('direccion');
+const email =  document.getElementById('email');
+const telefono =  document.getElementById('telefono');
+const tarjeta =  document.getElementById('tarjeta');
+const cv =  document.getElementById('cvv');
+const montoFinal = document.querySelector('.monto-final');
+const consulta = document.getElementById('consulta');
+const enviar = document.getElementById('enviar');
+
 export {
     sectionProducts,
     signUp,
@@ -35,5 +46,14 @@ export {
     submit,
     goBack,
     instructionList,
-    interaction
+    interaction,
+    notif,
+    direccion,
+    email,
+    telefono,
+    tarjeta,
+    cv,
+    montoFinal,
+    consulta,
+    enviar
 }

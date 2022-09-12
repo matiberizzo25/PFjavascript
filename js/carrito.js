@@ -1,3 +1,5 @@
+import { notif } from "../export/dom.js";
+
 const sectCart = document.getElementById('contenedor--carrito');
 const cart = document.getElementById('carrito');
 const TotalCompra = document.createElement('h3');
@@ -7,16 +9,14 @@ const delAll = document.createElement('button');
 const cartProds = document.getElementById('carrito-prods');
 const alertCont = document.createElement('div');
 
-alertCont.innerHTML = `<h4>¡Oops! Tu carrito esta vacio. Para comprar, redirigete a la seccion de <a href="../index.html" class='acento'>INICIO</a></h4>`;
-
-
 sectCart.appendChild(cartProds);
-
 delAll.innerHTML = "Vaciar Carrito";
 btnEnd.className = 'btnEnd';
 btnEnd.innerHTML = 'Finalizar Compra';
 
 let carrito = [];
+
+alertCont.innerHTML = `<h4>¡Oops! Tu carrito esta vacio. Para comprar, redirigete a la seccion de <a href="../index.html" class='acento'>INICIO</a></h4>`;
 
 if (localStorage.getItem('carrito') != null) {
     carrito = JSON.parse(localStorage.getItem('carrito'));
@@ -74,6 +74,7 @@ const agregarCarrito = (id,url,prodProperty) =>{
                 confirmButtonColor: '#111111',
             }
             )
+            notif.innerText = carrito.length + 1;
             carrito.push(url.find(prods => prods.id == id));
             localStorage.setItem("carrito", JSON.stringify(carrito));
             calcularCarrito();

@@ -7,6 +7,8 @@ CAMBIOS IMPORTANTES
     -- Se realizo el renderizado del carrito en funcion de los productos agregados (js/carrito.js)
     -- Se agrego la funcion para finalizar la compra y una para vaciar el carrito (js/carrito.js): 84 (vaciarCarrito()).
     -- Se agregaron funciones para el signUp y el signOut con su debida validacion (js/signup.js).
+    -- Validacion del formulario de contacto en (js/contacto.js)
+    -- Creacion del checkout y validacion del mismo (js/checkout.js)
 - ESTILOS:
     -- Evento scroll en header para glassmorphism (js/estilos.js).
     -- Efecto parallax con JS en (js/estilos.js): 19.
@@ -14,5 +16,3 @@ CAMBIOS IMPORTANTES
     -- Se agregaron animaciones con animate.css a los HTMLs.
 - OTROS: 
     -- Modificado el JSON de productos.
-- PROXIMOS:
-    -- Validacion del formulario de contacto en (js/contacto.js)

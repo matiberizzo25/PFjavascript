@@ -9,7 +9,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script src="../js/chekout.js" defer type="module"></script>
+    <script src="../js/checkout.js" defer type="module"></script>
     <link rel="stylesheet" href="../css/styles.css">
     <title>Checkout</title>
 </head>
@@ -26,15 +26,15 @@
                 <form action="#">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
                     </div>
                     <div class="form-group">
                         <label for="apellido">Apellido</label>
-                        <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+                        <input type="text" class="form-control" id="apellido" placeholder="Apellido" >
                     </div>
                     <div class="form-group">
                             <label for="direccion">Direccion</label>
-                            <input type="text" class="form-control" id="direccion" placeholder="Calle y altura" required>
+                            <input type="text" class="form-control" id="direccion" placeholder="Calle y altura" >
                     </div>
                     <div class="form-group">
                         <label for="email">Correo electronico</label>
@@ -42,24 +42,19 @@
                     </div>
                     <div class="form-group">
                         <label for="telefono">Telefono</label>
-                        <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required>
+                        <input type="tel" class="form-control" id="telefono" placeholder="Telefono" >
                     </div>
                     <div class="form-group">
                         <label for="tarjeta">Tarjeta de credito</label>
-                        <input type="text" class="form-control" id="tarjeta" placeholder="Numero de tarjeta" required>
+                        <input type="text" class="form-control" id="tarjeta" placeholder="Numero de tarjeta" >
                     </div>
                     <div class="form-group">
                         <label for="codigo">Codigo de seguridad</label>
-                        <input type="text" class="form-control" id="cvv" placeholder="Codigo de seguridad" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="vencimiento">Vencimiento</label>
-                        <input type="month" class="form-control" id="vencimiento" placeholder="Vencimiento" required>
+                        <input type="text" class="form-control" id="cvv" placeholder="Codigo de seguridad" >
                     </div>
                         <button id="btnEnviar">Comprar</button>
                 </form>
             </div>
         </div>
-    <script src="js/checkout.js"></script>
 </body>
 </html>

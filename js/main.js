@@ -1,17 +1,10 @@
 import {
     sectionProducts,
     signUp,
-    bienvenida,
     logOut,
-    interaction
 } from "../export/dom.js";
 
 import {agregarCarrito} from './carrito.js';
-
-// Atributos, clases y html de los elementos del DOM.
-
-logOut.className = 'log-out';
-logOut.innerHTML = 'LOG OUT';
 
 // fetch al json de productos para renderizarlo en el DOM.
 
@@ -45,17 +38,6 @@ signUp.addEventListener('click',(e)=>{
     window.location.href = "./pages/signup.html";
 })
 
-let generarCodigo = () =>{
-    let code = '';
-    let numbChars = '0123456789'
-    let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    let minusChars = 'abcdefghijklmnopqrstuvwxyz'
-        for (let i = 0; i < 6; i++){
-            code+= numbChars.concat(chars,minusChars)[Math.floor(Math.random() * numbChars.concat(chars,minusChars).length)]
-        }
-        return code;
-    }
-
 logOut.addEventListener('click',(e)=>{
     Swal.fire({
         title: '¿Quieres cerrar sesión?',
@@ -73,43 +55,6 @@ logOut.addEventListener('click',(e)=>{
     })
 })
 
-// Comprobación de datos en localStorage para mostrar el nombre del usuario en el DOM.
-
-const comprobarSignUp = ()  => {
-    return new Promise((resolve, reject) => {
-        if (localStorage.getItem('datos') && localStorage.getItem('email')){
-            resolve('Bienvenido de nuevo');
-        } else {
-            reject('No estas registrado');
-        }
-    })
-}
-
-const mostrarDatos = async () => {
-    comprobarSignUp()
-    .then(res =>{
-        signUp.remove();
-        interaction.appendChild(logOut);
-        let elementoUsuario = document.createElement('p');
-        elementoUsuario.className = 'username animate__animated animate__fadeIn animate__delay-1s animate__medium';
-        elementoUsuario.innerHTML = `Bienvenido <span>${localStorage.getItem('datos')}</span>`;
-        bienvenida.appendChild(elementoUsuario);
-        console.log(generarCodigo());
-    }).catch(err =>{
-        setInterval(() => {
-            Toastify({
-                text: '¡Logueate para obtener increibles beneficios!',
-                duration: 3000,
-                gravity: 'bottom',
-                position: 'right',
-                backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
-            }).showToast();
-        }, 30000);
-    })
-}
-
-mostrarDatos();
-
 // DOM PARA PARALLAX BOTON
 
 const buttonParallax = document.querySelector('.button--parallax');
@@ -117,7 +62,7 @@ const buttonParallax = document.querySelector('.button--parallax');
 buttonParallax.addEventListener('click',(e)=>{
     Swal.fire({
         title: '¡Aprovecha las ofertas de la semana!',
-        html: '<p>¡Durante solo esta semana con tu codigo de usuario tenes hasta un 50% de descuento en todos los juegos!</p><br><p>¡No te quedes sin tus juegos favoritos!</p>',
+        html: '<p>¡Durante solo esta semana tenes hasta un 50% de descuento en todos los juegos!</p><br><p>¡No te quedes sin tus juegos favoritos!</p>',
         icon: 'info',
         background: '#121212',
         confirmButtonColor: '#111111',
